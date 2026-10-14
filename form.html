@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission Design</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+ <nav
+      class="navbar navbar-expand-lg bg-body-tertiary px-3 shadow-sm"
+      style="background-color: #f28aa1 !important"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Nikreative Studio </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="form.html" class="nav-link" href="#">Form</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+     <!-- contact section -->
+    <div id="kontak" class="bg-light py-5"
+    style="background-color: #fad6d3 !important">
+      <div class="container">
+        <h2 class="text-center mb-4">Form Submission</h2>
+        <form
+          class="mx-auto bg-white p-4 rounded shadow-sm"
+          style="max-width: 500px"
+        >
+          <!-- input nama -->
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Nama Lengkap</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="input-nama"
+              placeholder="Masukkan nama disini"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+            >Email</label>
+          <input 
+          type="email" 
+          class="form-control" 
+          id="exampleFormControlInput1" 
+          placeholder="name@example.com">
+          </div>
+
+          <label for="exampleDataList" class="form-label">Jenis Design</label>
+            <input class="form-control mb-3" list="datalistOptions" id="exampleDataList" placeholder="Apa yang ingin kamu buat?">
+            <datalist id="datalistOptions">
+              <option value="Poster/Pamflet">
+              <option value="Infografis">
+              <option value="Feeds Instagram">
+              <option value="Story Instagram">
+              <option value="Banner">
+              <option value="ID Card">
+              <option value="PPT">
+            </datalist>
+
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Nama Kegiatan</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="input-nama"
+              placeholder="ex: ROTASI 2026"
+            />
+          </div>
+
+          <label for="exampleColorInput" class="form-label mb-3">Color Palette</label>
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#227e9d" title="Choose your color">
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#51acc5" title="Choose your color">
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#96d0d2" title="Choose your color">
+
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Deadline</label>
+            <input type="date" class="form-control" aria-label="Date picker" value="2026-02-24">
+
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Kumpulan Aset</label>
+               <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+
+          <!-- input pesan -->
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Deskripsi Design</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              placeholder="ex: saya ingin membuat design untuk struktural himpunan mahasiswa"
+            ></textarea>
+          </div>
+
+          <div class="d-flex align-items-start">
+            <input
+              class="form-check-input agreement-checkbox"
+              type="checkbox"
+              id="agreement"
+              >
+
+            <label
+              class="agreement-text"
+              for="agreement"
+              >
+              <p>Saya telah membaca, memahami, dan menyetujui Syarat dan Ketentuan.</p>
+                </label>
+            </div>
+
+
+        <!-- Tombol Submit -->
+        <button type="button" class="btn btn-primary w-100" onclick="sukses()">Konfirmasi</button>
+            </form>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script>
+        function sukses() {
+            Swal.fire({
+            title: "Pesanan Anda telah masuk, segera konfirmasi di kolom contact!",
+            icon: "success",
+            draggable: true
+            });
+        }
+     </script>
+  </body>
+</html>
